@@ -1,0 +1,27 @@
+@layer  gapenting, penting, pentingbanget;
+
+@layer pentingbanget {
+    h1 {
+        color: blue;
+    }
+}
+
+@layer penting {
+    h1 {
+        color: red;
+    }
+
+    h2 {
+        color:aqua;
+    } 
+}
+
+@layer gapenting {
+    h1 {
+        color: green;
+    }
+
+    h2 {
+        color: yellow;
+    }
+}
