@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* yang diterapkan adalah aturan paling bawah */
+
+        /* type selector */
+        h1 {
+            color: green;
+        }
+
+        /* id selector */
+        #my_id {
+            color: yellow;
+        }
+
+        /* class selector */
+        .my-class {
+            color: blue;
+        }
+
+        /* list selector */
+        p,
+        h1,
+        h2,
+        #title {
+            color: red;
+        }
+
+        /* combinator selector */
+        /* descendent selector (space) */
+        /* => memilih semua tag p di dalam div */
+        .descendent p {
+            color: purple;
+        }
+
+        /* child selector (>) */
+        /* => memilih tag p tepat di bawah kelas child-container */
+        .child>p {
+            color: blue;
+        }
+
+
+        /* adjacent sibling selector (+) */
+        .adjacent+p {
+            color: aqua;
+        }
+
+        /* general sibling selector (~) */
+        .general~p {
+            color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ini title</h1>
+    <h2>Ini subtitle</h2>
+    <p>Ini description</p>
+
+    <!-- descendent selector -->
+    <div class="descendent">
+        <p>dipilih</p>
+        <p>dipilih</p>
+        <article>
+            <p>dipilih</p>
+        </article>
+    </div>
+
+    <!-- child selector -->
+    <div class="child">
+        <p>dipilih</p>
+        <p>dipilih</p>
+        <article>
+            <p>tidak dipilih</p>
+        </article>
+    </div>
+
+    <!-- adjacent sibling selector -->
+    <div class="adjacent">
+        <p>tidak dipilih</p>
+    </div>
+    <p>dipilih</p>
+    <p>tidak dipilih</p>
+
+    <!-- general sibling selector -->
+    <div>
+        <div class="general">
+            <p>tidak dipilih</p>
+        </div>
+        <p>dipilih</p>
+        <p>dipilih</p>
+    </div>
+    <p>tidak dipilih</p>
+</body>
+
+</html>
