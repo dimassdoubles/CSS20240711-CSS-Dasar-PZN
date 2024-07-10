@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* memilih tag a yang punya attribute target */
+        a[target] {
+            color: red;
+        }
+
+        /* memilih tag a yang memiliki attribute target _self */
+        a[target="_self"] {
+            color: green;
+        }
+
+        /* memilih tag p yang titlenya ada kata belajar */
+        p[title~="belajar"] {
+            color: blueviolet;
+        }
+
+        p[title|="hello"] {
+            color: brown;
+        }
+
+        p[title^="ayo"] {
+            color: chartreuse;
+        }
+
+        p[title$="lagi"] {
+            color: brown;
+        }
+
+        p[title*="sekolah"] {
+            color: blue;
+        }
+
+        [title="tanpatag"] {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="" target="_blank">dipilih</a>
+    <a href="">tidak dipilih</a>
+    <a href="" target="_blank">dipilih</a>
+    <a href="">tidak dipilih</a>
+
+    <!-- = -->
+    <a href="" target="_self">dipilih</a>
+
+    <!-- ~= belajar -->
+    <p title="belajarmandiri">tidak dipilih</p>
+    <p title="belajar mandiri">dipilih</p>
+
+    <!-- |= hello -->
+    <p title="helloworld">tidak dipilih</p>
+    <p title="hello world">tidak dipilih</p>
+    <p title="hello">dipilih</p>
+    <p title="hello-world">dipilih</p>
+
+    <!-- ^= ayo -->
+    <p title="ayoberangkat">dipilih</p>
+    <p title="ayo berangkat">dipilih</p>
+    <p title="ayo-berangkat">dipilih</p>
+    <p title="berangkat ayo">tidak dipilih</p>
+
+    <!-- $= lagi -->
+    <p title="lagi ayo">tidak dipilih</p>
+    <p title="ayolagi">dipilih</p>
+    <p title="ayo-lagi">dipilih</p>
+    <p title="ayo lagi">dipilih</p>
+
+    <!-- *= sekolah -->
+    <p title="sekolahyok">dipilih</p>
+    <p title="ayok sekolah">dipilih</p>
+    <p title="sekolah ayok">dipilih</p>
+
+    <p title="tanpatag">dipilih</p>
+    <span title="tanpatag">dipilih</span>
+</body>
+
+</html>
