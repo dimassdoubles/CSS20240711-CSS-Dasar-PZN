@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo element selector */
+
+        .topic-games::before {
+            content: "[games] ";
+        }
+
+        .topic-weather::after {
+            content: " [Cuaca]";
+        }
+
+        .topic-hot::before {
+            content: '[Hot] ';
+        }
+    </style>
+</head>
+
+<body>
+    <p class="topic-games">Ini adalah topik games</p>
+    <p class="topic-weather">Ini adalah topik cuaca</p>
+    <p class="topic-hot">Ini adalah topik hot</p>
+</body>
+
+</html>
